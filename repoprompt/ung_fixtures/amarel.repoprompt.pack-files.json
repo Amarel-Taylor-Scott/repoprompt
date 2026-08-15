@@ -1,0 +1,81 @@
+[
+  {
+    "inputs": {
+      "files": {
+        "README.md": "# calc\n\nA tiny calculator package.\n",
+        "calc/__init__.py": "from .ops import add, mul\n",
+        "calc/ops.py": "def add(a, b):\n    \"\"\"Sum two numbers.\"\"\"\n    return a + b\n\ndef mul(a, b):\n    return a * b\n\nclass Calculator:\n    def __init__(self, start=0):\n        self.total = start\n\n    def apply(self, fn, value):\n        self.total = fn(self.total, value)\n        return self.total\n"
+      }
+    },
+    "parameters": {
+      "repo_name": "calc"
+    },
+    "expect": {
+      "prompt": "# Repository: calc\n\n3 files\n\n## File tree\n\n```\n\u251c\u2500\u2500 calc/\n\u2502   \u251c\u2500\u2500 __init__.py\n\u2502   \u2514\u2500\u2500 ops.py\n\u2514\u2500\u2500 README.md\n```\n\n## Files\n\n### `README.md`\n\n```markdown\n# calc\n\nA tiny calculator package.\n```\n\n### `calc/__init__.py`\n\n```python\nfrom .ops import add, mul\n```\n\n### `calc/ops.py`\n\n```python\ndef add(a, b):\n    \"\"\"Sum two numbers.\"\"\"\n    return a + b\n\ndef mul(a, b):\n    return a * b\n\nclass Calculator:\n    def __init__(self, start=0):\n        self.total = start\n\n    def apply(self, fn, value):\n        self.total = fn(self.total, value)\n        return self.total\n```\n",
+      "stats": {
+        "included": 3,
+        "total": 3,
+        "est_tokens": 139,
+        "skipped": []
+      }
+    }
+  },
+  {
+    "inputs": {
+      "files": {
+        "README.md": "# calc\n\nA tiny calculator package.\n",
+        "calc/__init__.py": "from .ops import add, mul\n",
+        "calc/ops.py": "def add(a, b):\n    \"\"\"Sum two numbers.\"\"\"\n    return a + b\n\ndef mul(a, b):\n    return a * b\n\nclass Calculator:\n    def __init__(self, start=0):\n        self.total = start\n\n    def apply(self, fn, value):\n        self.total = fn(self.total, value)\n        return self.total\n",
+        "data/blob.bin": "PK\u0000\u0003binarycontent",
+        "docs/guide.md": "# Guide\n\nUsage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. Usage details paragraph. "
+      }
+    },
+    "parameters": {
+      "max_tokens": 150,
+      "repo_name": "calc"
+    },
+    "expect": {
+      "prompt": "# Repository: calc\n\n5 files\n\n## File tree\n\n```\n\u251c\u2500\u2500 calc/\n\u2502   \u251c\u2500\u2500 __init__.py\n\u2502   \u2514\u2500\u2500 ops.py\n\u251c\u2500\u2500 data/\n\u2502   \u2514\u2500\u2500 blob.bin\n\u251c\u2500\u2500 docs/\n\u2502   \u2514\u2500\u2500 guide.md\n\u2514\u2500\u2500 README.md\n```\n\n## Files\n\n### `README.md`\n\n```markdown\n# calc\n\nA tiny calculator package.\n```\n\n### `calc/__init__.py`\n\n```python\nfrom .ops import add, mul\n```\n",
+      "stats": {
+        "included": 2,
+        "total": 5,
+        "est_tokens": 76,
+        "skipped": [
+          [
+            "calc/ops.py",
+            "budget"
+          ],
+          [
+            "data/blob.bin",
+            "binary"
+          ],
+          [
+            "docs/guide.md",
+            "budget"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "inputs": {
+      "files": {
+        "calc/ops.py": "def add(a, b):\n    \"\"\"Sum two numbers.\"\"\"\n    return a + b\n\ndef mul(a, b):\n    return a * b\n\nclass Calculator:\n    def __init__(self, start=0):\n        self.total = start\n\n    def apply(self, fn, value):\n        self.total = fn(self.total, value)\n        return self.total\n"
+      }
+    },
+    "parameters": {
+      "fmt": "xml",
+      "map_mode": true,
+      "repo_name": "calc"
+    },
+    "expect": {
+      "prompt": "# Repository: calc\n\n1 files\n\n## File tree\n\n```\n\u2514\u2500\u2500 calc/\n    \u2514\u2500\u2500 ops.py\n```\n\n## Files\n\n<file path=\"calc/ops.py\">\ndef add(a, b): ...\ndef mul(a, b): ...\nclass Calculator:\n    def __init__(self, start): ...\n    def apply(self, fn, value): ...\n</file>\n",
+      "stats": {
+        "included": 1,
+        "total": 1,
+        "est_tokens": 61,
+        "skipped": []
+      }
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "inputs": {
+      "paths": [
+        "calc/__init__.py",
+        "calc/ops.py",
+        "README.md"
+      ]
+    },
+    "parameters": {},
+    "expect": "\u251c\u2500\u2500 calc/\n\u2502   \u251c\u2500\u2500 __init__.py\n\u2502   \u2514\u2500\u2500 ops.py\n\u2514\u2500\u2500 README.md"
+  },
+  {
+    "inputs": {
+      "paths": [
+        "a/b/c.txt",
+        "a/d.txt",
+        "e.txt"
+      ]
+    },
+    "parameters": {},
+    "expect": "\u251c\u2500\u2500 a/\n\u2502   \u251c\u2500\u2500 b/\n\u2502   \u2502   \u2514\u2500\u2500 c.txt\n\u2502   \u2514\u2500\u2500 d.txt\n\u2514\u2500\u2500 e.txt"
+  }
+]

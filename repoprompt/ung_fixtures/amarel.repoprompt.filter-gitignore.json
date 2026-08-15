@@ -1,0 +1,58 @@
+[
+  {
+    "inputs": {
+      "paths": [
+        "src/app.py",
+        "debug.log",
+        "keep.log",
+        "build/out.o",
+        "dist/pkg.tar.gz",
+        "src/__pycache__/app.cpython-312.pyc",
+        "docs/notes.md"
+      ],
+      "patterns": "# build artifacts\n*.log\nbuild/\n/dist\n!keep.log\n**/__pycache__\n"
+    },
+    "parameters": {},
+    "expect": {
+      "kept": [
+        "src/app.py",
+        "keep.log",
+        "build/out.o",
+        "docs/notes.md"
+      ],
+      "ignored": [
+        "debug.log",
+        "dist/pkg.tar.gz",
+        "src/__pycache__/app.cpython-312.pyc"
+      ]
+    }
+  },
+  {
+    "inputs": {
+      "paths": [
+        "src/app.py",
+        "debug.log",
+        "keep.log",
+        "build/out.o",
+        "dist/pkg.tar.gz",
+        "src/__pycache__/app.cpython-312.pyc",
+        "docs/notes.md"
+      ],
+      "patterns": "docs/**\n"
+    },
+    "parameters": {},
+    "expect": {
+      "kept": [
+        "src/app.py",
+        "debug.log",
+        "keep.log",
+        "build/out.o",
+        "dist/pkg.tar.gz",
+        "src/__pycache__/app.cpython-312.pyc"
+      ],
+      "ignored": [
+        "docs/notes.md"
+      ]
+    }
+  }
+]

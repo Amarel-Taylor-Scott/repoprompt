@@ -1,0 +1,16 @@
+[
+  {
+    "inputs": {
+      "text": "def add(a, b):\n    \"\"\"Sum two numbers.\"\"\"\n    return a + b\n\ndef mul(a, b):\n    return a * b\n\nclass Calculator:\n    def __init__(self, start=0):\n        self.total = start\n\n    def apply(self, fn, value):\n        self.total = fn(self.total, value)\n        return self.total\n"
+    },
+    "parameters": {},
+    "expect": 68
+  },
+  {
+    "inputs": {
+      "text": "hi"
+    },
+    "parameters": {},
+    "expect": 1
+  }
+]
